@@ -9,17 +9,18 @@ m = length(y); % number of training examples
 
 temp = 0;
 % You need to return the following variables correctly 
-for i = 1:m
-    temp = temp + (theta*X(i)-y(i));
-end
-J = 1/2*m*temp;
+
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-
-
+%for i = 1:m
+%    temp = temp + (theta*X(i)-y(i))^2;
+%end
+H = X*theta-y;
+%J = 1/(2*m)*temp;
+J =  (1/(2*m))*sum(H.*H)
 
 
 % =========================================================================
